@@ -1246,6 +1246,31 @@ footer h4 {
 .tag-workshop { background: rgba(27,78,168,0.1); color: var(--blue); }
 .tag-session  { background: rgba(227,31,38,0.08); color: var(--red); }
 
+.timetable-dur {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--mid-gray);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.timetable-parallel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.timetable-parallel span {
+  background: rgba(27,78,168,0.07);
+  color: var(--blue);
+  border: 1px solid rgba(27,78,168,0.15);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 /* ============================================
    VIDEO EMBED
    ============================================ */
