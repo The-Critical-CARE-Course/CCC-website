@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a place on The Critical CARE Course or get in touch with the team.">
+  <title>Book &amp; Contact — The Critical CARE Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.png" alt="The Critical CARE Course" style="height:44px; width:auto; flex-shrink:0;">
+          <div class="nav-logo-text">
+            <div class="brand">The Critical <span style="color:var(--red)">CARE</span> Course</div>
+            <div class="sub"><span style="color:var(--red)">C</span>ore <span style="color:var(--red)">A</span>ssessment <span style="color:var(--red)">R</span>evision &amp; <span style="color:var(--red)">E</span>ducation</div>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">The Team</a></li>
+          <li><a href="contact.html" style="color:var(--navy); font-weight:600;">Contact</a></li>
+          <li><a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" class="nav-cta">Book a Place</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE HERO ========== -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Book &amp; Contact</span>
+      </div>
+      <h1>Book a Place</h1>
+      <p>Secure your spot on the next course, or get in touch with any questions.</p>
+    </div>
+  </header>
+
+  <!-- ========== UPCOMING DATES ========== -->
+  <section class="dates-section">
+    <div class="container">
+      <div class="section-eyebrow">Upcoming Courses</div>
+      <h2 class="section-title">Available dates</h2>
+      <p class="section-lead" style="margin-bottom:32px;">Book directly through our booking partner, Sympozium. All bookings are managed via their secure platform.</p>
+
+      <!--
+        ======================================================
+        HOW TO UPDATE COURSE DATES:
+        Edit the rows in the <tbody> below.
+        - Change the date, location, and spaces in each <td>.
+        - For the status badge, use one of:
+            <span class="status-badge status-open">Open</span>
+            <span class="status-badge status-limited">Limited spaces</span>
+            <span class="status-badge status-full">Full</span>
+        - To add a row, copy a <tr>...</tr> block and edit it.
+        - To remove a date, delete the <tr>...</tr> block.
+        ======================================================
+      -->
+      <div class="dates-table-wrap">
+        <table class="dates-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Spaces</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- ===== ADD / EDIT COURSE DATES BELOW ===== -->
+            <tr>
+              <td><strong>TBC 2026</strong></td>
+              <td>West Midlands</td>
+              <td>Approx. 30</td>
+              <td><span class="status-badge status-open">Open</span></td>
+              <td><a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" class="btn btn-primary" style="padding:8px 16px; font-size:13px;">Book &rarr;</a></td>
+            </tr>
+            <!-- ===== END COURSE DATES ===== -->
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:13px; color:var(--mid-gray); margin-top:16px;">
+        Don't see a suitable date? <a href="#enquiry-form" style="color:var(--teal);">Send us an enquiry</a> and we'll let you know when new dates are added.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="enquiry-form">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Aside -->
+        <div class="contact-aside">
+          <h2>Get in touch</h2>
+          <p>Use the form to ask a question, request a group booking, or enquire about upcoming dates. We'll get back to you as soon as possible.</p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div>
+            <div class="contact-item-text">
+              <strong>Booking Portal</strong>
+              <a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener">sympozium.co.uk</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📖</div>
+            <div class="contact-item-text">
+              <strong>Course Manual</strong>
+              <a href="https://the-critical-care-course.gitbook.io/the-critical-care-course-manual" target="_blank" rel="noopener">Available online (free)</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">𝕏</div>
+            <div class="contact-item-text">
+              <strong>Twitter / X</strong>
+              <a href="https://twitter.com/critcarecourse" target="_blank" rel="noopener">@critcarecourse</a>
+            </div>
+          </div>
+
+          <div class="book-cta-box">
+            <h3>Ready to book?</h3>
+            <p>All bookings are made securely through our partner, Sympozium. Click below to see available places and complete your booking.</p>
+            <a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" class="btn btn-primary">Book via Sympozium &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="form-card">
+          <h3>Send us a message</h3>
+
+          <!--
+            ======================================================
+            CONTACT FORM SETUP (Formspree):
+            1. Go to https://formspree.io and create a free account.
+            2. Create a new form — you'll receive a form endpoint URL like:
+               https://formspree.io/f/xxxxxxxx
+            3. Replace the action="..." value below with your endpoint.
+            4. Formspree will email you each submission at no cost
+               (up to 50 submissions/month on the free tier).
+            ======================================================
+          -->
+          <form
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            id="contactForm"
+          >
+            <!-- Honeypot anti-spam field (hidden) -->
+            <input type="text" name="_gotcha" style="display:none;">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First name <span style="color:#dc2626;">*</span></label>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="e.g. Sarah">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last name <span style="color:#dc2626;">*</span></label>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="e.g. Jones">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address <span style="color:#dc2626;">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@nhs.net">
+            </div>
+
+            <div class="form-group">
+              <label for="role">Your role</label>
+              <select id="role" name="role">
+                <option value="" disabled selected>Select your role</option>
+                <option>Foundation Doctor (FY1 / FY2)</option>
+                <option>Core Trainee</option>
+                <option>Specialist Trainee</option>
+                <option>Consultant</option>
+                <option>Nursing Staff</option>
+                <option>Critical Care Practitioner</option>
+                <option>Allied Health Professional</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="" disabled selected>What is your enquiry about?</option>
+                <option>Course booking</option>
+                <option>Group / departmental booking</option>
+                <option>Upcoming dates</option>
+                <option>Course content</option>
+                <option>Course manual</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span style="color:#dc2626;">*</span></label>
+              <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+
+            <p class="form-note">We aim to respond within 2 working days. For urgent booking queries, please use the <a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" style="color:var(--teal);">Sympozium booking portal</a> directly.</p>
+
+          </form>
+
+          <!-- Success message (shown after submission) -->
+          <div id="successMsg" style="display:none; text-align:center; padding:40px 20px;">
+            <div style="font-size:48px; margin-bottom:16px;">&#10003;</div>
+            <h3 style="font-size:20px; color:var(--navy); margin-bottom:8px;">Message sent!</h3>
+            <p style="font-size:15px; color:var(--body-text);">Thank you for getting in touch. We'll be in touch within 2 working days.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">The Critical CARE Course</div>
+          <p>Fundamentals of critical care medicine through multidisciplinary team small-group facilitated learning, taught by experienced clinicians.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About the Course</a></li>
+            <li><a href="foreword.html">Course Foreword</a></li>
+            <li><a href="team.html">The Team</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="https://the-critical-care-course.gitbook.io/the-critical-care-course-manual" target="_blank" rel="noopener">Course Manual</a></li>
+            <li><a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener">Book a Place</a></li>
+            <li><a href="about.html#terms">Payment Terms</a></li>
+            <li><a href="https://twitter.com/critcarecourse" target="_blank" rel="noopener">@critcarecourse</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Critical CARE Course. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="https://twitter.com/critcarecourse" target="_blank" rel="noopener" class="social-link" aria-label="Twitter / X">&#120143;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    // Form submission feedback (Formspree AJAX)
+    const form       = document.getElementById('contactForm');
+    const submitBtn  = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('successMsg');
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        const data = new FormData(form);
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+          } else {
+            submitBtn.textContent = 'Send Message';
+            submitBtn.disabled = false;
+            alert('Something went wrong. Please try again or email us directly.');
+          }
+        } catch (err) {
+          submitBtn.textContent = 'Send Message';
+          submitBtn.disabled = false;
+          alert('Something went wrong. Please try again or email us directly.');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

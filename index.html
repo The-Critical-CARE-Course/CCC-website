@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Critical CARE Course — Core Assessment Revision &amp; Education. A one-day, small-group critical care course for the multidisciplinary team. Endorsed by the Intensive Care Society.">
+
+  <title>The Critical CARE Course — Core Assessment Revision &amp; Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.png" alt="The Critical CARE Course" style="height:44px; width:auto; flex-shrink:0;">
+          <div class="nav-logo-text">
+            <div class="brand">The Critical <span style="color:var(--red)">CARE</span> Course</div>
+            <div class="sub"><span style="color:var(--red)">C</span>ore <span style="color:var(--red)">A</span>ssessment <span style="color:var(--red)">R</span>evision &amp; <span style="color:var(--red)">E</span>ducation</div>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" style="color:var(--navy); font-weight:600;">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">The Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" class="nav-cta">Book a Place</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        Endorsed by the Intensive Care Society
+      </div>
+      <h1>The Critical <span class="accent">CARE</span> Course</h1>
+      <p class="hero-acronym-line" style="font-size:clamp(17px,2.2vw,22px); font-weight:700; margin-bottom:20px; color:rgba(255,255,255,0.9);">
+        <span style="color:#FF3333;">C</span>ore&nbsp;
+        <span style="color:#FF3333;">A</span>ssessment&nbsp;
+        <span style="color:#FF3333;">R</span>evision &amp;&nbsp;
+        <span style="color:#FF3333;">E</span>ducation
+      </p>
+      <p class="hero-lead">A one-day, small-group course for the multidisciplinary team. Build confidence, deepen knowledge, and transform your critical care practice.</p>
+      <div class="hero-actions">
+        <a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" class="btn btn-primary">Book a Place &rarr;</a>
+        <a href="https://the-critical-care-course.gitbook.io/the-critical-care-course-manual" target="_blank" rel="noopener" class="btn btn-outline-white">Read the Course Manual</a>
+      </div>
+      <div class="hero-trust">
+        <img src="https://thecriticalcarecourse.com/wp-content/uploads/2019/09/ICS-Blue-grey-for-white-background-300x115.png" alt="Intensive Care Society" style="height:26px; opacity:0.55; filter:brightness(3);">
+        <span>Endorsed by the Intensive Care Society</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== STATS BAR (animated counters) ========== -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-divider">
+          <div class="stat-value" data-target="1" data-suffix=" Day">1 Day</div>
+          <div class="stat-label">Face-to-face course</div>
+        </div>
+        <div class="stat-divider">
+          <div class="stat-value" data-target="8" data-suffix=" max">8 max</div>
+          <div class="stat-label">Per workshop group</div>
+        </div>
+        <div class="stat-divider">
+          <div class="stat-value" data-target="4" data-suffix="">4</div>
+          <div class="stat-label">MDT roles in every group</div>
+        </div>
+        <div class="stat-divider">
+          <div class="stat-value">CPD</div>
+          <div class="stat-label">Certificate of attendance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PHOTO CAROUSEL ========== -->
+  <!--
+    PHOTOS: Replace the Unsplash stock images below with your own course-day photos.
+    Save photos into the images/ folder and change the src to e.g. "images/course-day-1.jpg"
+    Recommended size: at least 1400px wide, landscape orientation.
+    Update the data-caption text to match each photo.
+  -->
+  <div class="carousel-wrap" id="carousel" role="region" aria-label="Course photos">
+
+    <div class="carousel-slide active" data-caption="Small-group, hands-on learning in a supportive environment">
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1400&q=80&auto=format&fit=crop" alt="Medical team in a critical care setting" loading="lazy">
+    </div>
+
+    <div class="carousel-slide" data-caption="Multidisciplinary learning — doctors, nurses, and AHPs working together">
+      <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1400&q=80&auto=format&fit=crop" alt="Healthcare professionals in a small-group teaching session" loading="lazy">
+    </div>
+
+    <div class="carousel-slide" data-caption="Taught by experienced intensive care clinicians">
+      <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=1400&q=80&auto=format&fit=crop" alt="Clinical teaching in intensive care" loading="lazy">
+    </div>
+
+    <div class="carousel-slide" data-caption="Case-based workshops that bring the ICU to life">
+      <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1400&q=80&auto=format&fit=crop" alt="ICU environment and monitoring equipment" loading="lazy">
+    </div>
+
+    <div class="carousel-slide" data-caption="Building knowledge and confidence for life on the ICU">
+      <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1400&q=80&auto=format&fit=crop" alt="Medical professional in hospital setting" loading="lazy">
+    </div>
+
+    <div class="carousel-overlay">
+      <p class="carousel-caption" id="carouselCaption">Small-group, hands-on learning in a supportive environment</p>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="carouselPrev" aria-label="Previous slide">&#8592;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" id="carouselNext" aria-label="Next slide">&#8594;</button>
+    </div>
+
+  </div>
+
+  <!-- ========== ABOUT OVERVIEW ========== -->
+  <section>
+    <div class="container">
+      <div class="section-eyebrow animate">About the Course</div>
+      <h2 class="section-title animate delay-1">What is The Critical CARE Course?</h2>
+      <p class="section-lead animate delay-2">Critical care can feel overwhelming. Our course gives you the solid foundation you need to work confidently within the ICU — and to keep progressing.</p>
+      <p class="animate delay-2" style="font-size:16px; line-height:1.85; color:var(--body-text); max-width:780px; margin-bottom:20px;">
+        The course combines a purpose-written, regularly updated pre-course manual with a full day of small-group interactive workshops led by experienced critical care practitioners. Rather than passive lectures, every session is designed around discussion, case studies, and collaborative learning — mirroring the multidisciplinary teamwork of real critical care.
+      </p>
+      <p class="animate delay-3" style="font-size:16px; line-height:1.85; color:var(--body-text); max-width:780px; margin-bottom:36px;">
+        Whether you are an FY1 encountering the ICU for the first time, a core trainee with a growing interest in intensive care, or a nurse stepping into greater responsibility — The Critical CARE Course gives you the knowledge and confidence to thrive.
+      </p>
+      <a href="about.html" class="btn btn-outline animate delay-3" style="display:inline-flex;">Learn more about the course</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== WHO IS IT FOR ========== -->
+  <section>
+    <div class="container">
+      <div class="section-eyebrow animate">Who Should Attend</div>
+      <h2 class="section-title animate delay-1">Designed for the whole critical care team</h2>
+      <p class="section-lead animate delay-2">The course benefits equally from all attendees — the collaborative format mirrors real-world ICU teamwork.</p>
+
+      <div class="audience-grid">
+        <div class="audience-card animate delay-1">
+          <div class="audience-icon">🩺</div>
+          <h3>Medical Staff</h3>
+          <p>Core trainees with an interest in critical care, foundation doctors looking to challenge themselves, and early specialist trainees consolidating their knowledge.</p>
+        </div>
+        <div class="audience-card animate delay-2">
+          <div class="audience-icon">🏥</div>
+          <h3>Nursing Staff</h3>
+          <p>Essential knowledge for nurses taking on higher levels of responsibility within critical care and developing their ICU career.</p>
+        </div>
+        <div class="audience-card animate delay-3">
+          <div class="audience-icon">⚕️</div>
+          <h3>Critical Care Practitioners</h3>
+          <p>Promotes high standards in care delivery and supports career advancement for those already working within intensive care units.</p>
+        </div>
+        <div class="audience-card animate delay-4">
+          <div class="audience-icon">🤝</div>
+          <h3>Allied Health Professionals</h3>
+          <p>Physiotherapists, occupational therapists, and other specialists involved in the care of critically ill patients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COURSE TIMETABLE ========== -->
+  <section class="timetable-section">
+    <div class="container">
+      <div class="section-eyebrow animate">Course Day</div>
+      <h2 class="section-title animate delay-1">What to expect on the day</h2>
+      <p class="section-lead animate delay-2" style="margin-bottom:40px;">
+        A structured day of sessions and small-group workshops, with plenty of time for discussion and questions.
+        <em style="color:var(--mid-gray); font-size:14px; display:block; margin-top:4px;">Indicative timetable — subject to change. Final schedule confirmed on booking.</em>
+      </p>
+
+      <!--
+        TIMETABLE: Edit the times, labels, and descriptions below.
+        Row types: default (blue dot), break (grey dot), highlight (red dot)
+        Tags: tag-session (red), tag-workshop (blue) — add inside .timetable-label if wanted
+      -->
+      <div class="timetable animate">
+
+        <div class="timetable-row highlight">
+          <div class="timetable-time">08:30</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Registration &amp; Welcome Coffee</div>
+            <div class="timetable-desc">Arrive, collect materials, meet faculty and fellow delegates</div>
+          </div>
+        </div>
+
+        <div class="timetable-row">
+          <div class="timetable-time">09:00</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Introduction to Critical Care <span class="timetable-tag tag-session">Session</span></div>
+            <div class="timetable-desc">Setting the scene — the ICU environment, monitoring, and the MDT</div>
+          </div>
+        </div>
+
+        <div class="timetable-row">
+          <div class="timetable-time">09:30</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Airway &amp; Respiratory Failure <span class="timetable-tag tag-workshop">Workshop</span></div>
+            <div class="timetable-desc">Assessment, oxygen therapy, ventilation principles — case-based discussion</div>
+          </div>
+        </div>
+
+        <div class="timetable-row break">
+          <div class="timetable-time">11:00</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Refreshment Break</div>
+          </div>
+        </div>
+
+        <div class="timetable-row">
+          <div class="timetable-time">11:20</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Cardiovascular Assessment &amp; Support <span class="timetable-tag tag-workshop">Workshop</span></div>
+            <div class="timetable-desc">Haemodynamic monitoring, shock, vasopressors and fluid management</div>
+          </div>
+        </div>
+
+        <div class="timetable-row break">
+          <div class="timetable-time">12:45</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Lunch</div>
+          </div>
+        </div>
+
+        <div class="timetable-row">
+          <div class="timetable-time">13:30</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Renal Failure &amp; Organ Support <span class="timetable-tag tag-workshop">Workshop</span></div>
+            <div class="timetable-desc">AKI in critical care, renal replacement therapy, fluid balance</div>
+          </div>
+        </div>
+
+        <div class="timetable-row">
+          <div class="timetable-time">14:45</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Sepsis &amp; the Deteriorating Patient <span class="timetable-tag tag-workshop">Workshop</span></div>
+            <div class="timetable-desc">Recognition, the sepsis 6, antibiotics, escalation and communication</div>
+          </div>
+        </div>
+
+        <div class="timetable-row break">
+          <div class="timetable-time">16:00</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Refreshment Break</div>
+          </div>
+        </div>
+
+        <div class="timetable-row highlight">
+          <div class="timetable-time">16:15</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Q&amp;A, Debrief &amp; Summary <span class="timetable-tag tag-session">Session</span></div>
+            <div class="timetable-desc">Faculty panel, open questions, consolidation of the day's learning</div>
+          </div>
+        </div>
+
+        <div class="timetable-row highlight">
+          <div class="timetable-time">17:00</div>
+          <div class="timetable-content">
+            <div class="timetable-label">Close &amp; Certificate Presentation</div>
+            <div class="timetable-desc">CPD certificate of attendance issued to all delegates</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COURSE FORMAT ========== -->
+  <section class="format-section">
+    <div class="container">
+      <div class="section-eyebrow animate" style="color:#FF3333;">Course Format</div>
+      <h2 class="section-title animate delay-1">How the course works</h2>
+      <p class="section-lead animate delay-2">Two complementary elements designed to maximise learning before and on the course day.</p>
+
+      <div class="format-grid">
+        <div class="format-card animate delay-1">
+          <div class="format-step">01</div>
+          <h3>Pre-Course Manual</h3>
+          <p>A comprehensive, purpose-written and regularly updated course manual forms the foundation of your preparation. We recommend one full day of private study before attending. The manual is freely available online.</p>
+          <a href="https://the-critical-care-course.gitbook.io/the-critical-care-course-manual" target="_blank" rel="noopener" class="btn btn-outline-white" style="font-size:14px; padding:10px 20px;">Access the Manual &rarr;</a>
+        </div>
+        <div class="format-card animate delay-2">
+          <div class="format-step">02</div>
+          <h3>1-Day Interactive Course</h3>
+          <p>Small-group workshops facilitated by experienced critical care clinicians. Case-based discussions reinforce key principles from the manual. The collaborative MDT format mirrors real-world ICU teamwork.</p>
+          <a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:14px; padding:10px 20px;">Book a Place &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VIDEO ========== -->
+  <section class="video-section">
+    <div class="container" style="text-align:center;">
+      <div class="section-eyebrow animate" style="color:#FF3333;">See the Course in Action</div>
+      <h2 class="section-title animate delay-1">Hear from the course directors</h2>
+      <p class="section-lead animate delay-2" style="margin-left:auto; margin-right:auto; text-align:center;">
+        A short introduction to The Critical CARE Course — what to expect, who it's for, and why we built it.
+      </p>
+
+      <!--
+        VIDEO: Replace the src below with your YouTube embed URL.
+        Example: https://www.youtube.com/embed/YOUR_VIDEO_ID
+        To get the embed URL: on YouTube, click Share > Embed and copy the src value.
+
+        If you don't have a video yet, delete the <iframe> and leave the .video-placeholder visible.
+      -->
+      <div class="video-wrap animate delay-2">
+
+        <!-- Replace this placeholder with your iframe once you have a video URL -->
+        <div class="video-placeholder" id="videoPlaceholder">
+          <div class="video-play-btn">&#9654;</div>
+          <p>Course introduction video — coming soon</p>
+          <p style="font-size:13px; margin-top:4px; opacity:0.6;">Add your YouTube URL to activate this section</p>
+        </div>
+
+        <!-- Uncomment and fill in your YouTube URL when ready:
+        <iframe
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1"
+          title="The Critical CARE Course — Introduction"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section>
+    <div class="container">
+      <div class="section-eyebrow animate">Common Questions</div>
+      <h2 class="section-title animate delay-1">Frequently asked questions</h2>
+
+      <div class="faq-list animate delay-2">
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            Who is The Critical CARE Course aimed at?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body" role="region">
+            <div class="faq-body-inner">
+              The course is designed for the whole critical care multidisciplinary team — nursing staff, medical staff, critical care practitioners, and allied health professionals such as physiotherapists and occupational therapists. From a medical perspective, it is ideal for core trainees with an interest in critical care, early specialist trainees consolidating their knowledge, and enthusiastic foundation doctors wanting to challenge themselves. It is best suited for those with a basic understanding of critical care.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            Do I need to prepare before attending?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body" role="region">
+            <div class="faq-body-inner">
+              Yes — and it makes a significant difference to how much you get from the day. The course manual is freely available online and replaces traditional pre-course lectures. We recommend setting aside one full day for private study before attending. The workshops build directly on the manual content, so preparation will help you engage more confidently in group discussions.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            What will I receive on completion?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body" role="region">
+            <div class="faq-body-inner">
+              All delegates who attend the full day receive a certificate of attendance, which can be used as evidence of continuing professional development (CPD). Please note the certificate confirms attendance, not clinical competence in any described skills.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            How many people are in each workshop group?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body" role="region">
+            <div class="faq-body-inner">
+              Workshop groups are intentionally small — typically up to 8 delegates per group — to ensure every attendee can contribute to discussions and get the most from the facilitated sessions. The small-group format is central to the course philosophy.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            Can my department book multiple places?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body" role="region">
+            <div class="faq-body-inner">
+              Absolutely — group bookings are welcome and the MDT composition makes it especially valuable when nurses, doctors, and AHPs from the same unit attend together. Please <a href="contact.html" style="color:var(--blue); font-weight:600;">contact us</a> to discuss group bookings and we will do our best to accommodate your team.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            What is the cancellation policy?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body" role="region">
+            <div class="faq-body-inner">
+              All bookings are managed through our booking partner, Sympozium. Please review their payment terms and cancellation policy at the time of booking. If you have a specific question about your booking, please <a href="contact.html" style="color:var(--blue); font-weight:600;">contact us</a> and we will be happy to help.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            Is the course suitable if I'm preparing for the FFICM exam?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body" role="region">
+            <div class="faq-body-inner">
+              The Critical CARE Course is designed to build a solid foundation rather than exam-specific depth. Those preparing for the FFICM may find some areas covered less comprehensively than required for that level — however, the course works well as consolidation alongside other exam preparation resources, particularly for core concepts and clinical reasoning.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-eyebrow animate">What Delegates Say</div>
+      <h2 class="section-title animate delay-1">Hear from past attendees</h2>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate delay-1">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">The training day was brilliant and a lot of fun. The teaching was very high quality — the opportunity to be taught by experienced clinicians in small groups was invaluable. I learnt a huge amount and would highly recommend this to anyone considering a career in critical care.</p>
+          <div class="testimonial-author">Sue</div>
+          <div class="testimonial-role">Junior Doctor (FY1)</div>
+        </div>
+        <div class="testimonial-card animate delay-2">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">Really good, informative course pitched at the perfect level for foundation trainees. I genuinely feel that I have learnt a lot about basic principles of critical care, which can be difficult to pick up on shift when it's busy.</p>
+          <div class="testimonial-author">Jonny</div>
+          <div class="testimonial-role">Junior Doctor</div>
+        </div>
+        <div class="testimonial-card animate delay-3">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">Well pitched for a CT1 in anaesthetics — the small-group format worked well with a good mixture of topics. I'm feeling more confident about starting my ICM module.</p>
+          <div class="testimonial-author">James</div>
+          <div class="testimonial-role">Allied Health Professional</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAILING LIST ========== -->
+  <div class="maillist-strip">
+    <div class="container">
+      <h3>Stay informed about upcoming dates</h3>
+      <p>New course dates fill quickly. Leave your email and we'll notify you as soon as new dates are released.</p>
+      <!--
+        MAILING LIST: Replace the form action with your Formspree endpoint (same as contact page)
+        or connect to Mailchimp / Buttondown / Kit by replacing the action URL.
+      -->
+      <form class="maillist-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="mailForm">
+        <input type="hidden" name="subject" value="Mailing list signup">
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Notify me</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========== ICS ENDORSEMENT ========== -->
+  <div class="endorsement-strip animate">
+    <div class="container">
+      <img src="https://thecriticalcarecourse.com/wp-content/uploads/2019/09/ICS-Blue-grey-for-white-background-300x115.png" alt="Intensive Care Society">
+      <p>The Critical CARE Course is endorsed by the Intensive Care Society</p>
+    </div>
+  </div>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-section">
+    <div class="container animate">
+      <h2>Ready to build your critical care knowledge?</h2>
+      <p>Join the next cohort of healthcare professionals developing confidence and expertise in the ICU.</p>
+      <a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:16px; padding:15px 36px;">Book Your Place Now</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">The Critical <span style="color:#FF3333;">CARE</span> Course</div>
+          <p style="font-size:12px; color:rgba(255,255,255,0.35); margin-top:4px; margin-bottom:12px;">Core Assessment Revision &amp; Education</p>
+          <p>Fundamentals of critical care medicine through multidisciplinary team small-group facilitated learning, taught by experienced clinicians.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About the Course</a></li>
+            <li><a href="foreword.html">Course Foreword</a></li>
+            <li><a href="team.html">The Team</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="https://the-critical-care-course.gitbook.io/the-critical-care-course-manual" target="_blank" rel="noopener">Course Manual</a></li>
+            <li><a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener">Book a Place</a></li>
+            <li><a href="about.html#terms">Payment Terms</a></li>
+            <li><a href="https://twitter.com/critcarecourse" target="_blank" rel="noopener">@critcarecourse</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Critical CARE Course. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="https://twitter.com/critcarecourse" target="_blank" rel="noopener" class="social-link" aria-label="Twitter / X">&#120143;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+  (() => {
+
+    // --- Mobile nav ---
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+
+    // --- Carousel ---
+    const slides    = [...document.querySelectorAll('.carousel-slide')];
+    const dotsWrap  = document.getElementById('carouselDots');
+    const caption   = document.getElementById('carouselCaption');
+    let current     = 0;
+    let timer;
+
+    // Build dots
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', `Slide ${i + 1}`);
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    });
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dotsWrap.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsWrap.children[current].classList.add('active');
+      if (caption) caption.textContent = slides[current].dataset.caption || '';
+      clearInterval(timer);
+      timer = setInterval(() => goTo(current + 1), 5000);
+    }
+
+    document.getElementById('carouselPrev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('carouselNext').addEventListener('click', () => goTo(current + 1));
+    timer = setInterval(() => goTo(current + 1), 5000);
+
+
+    // --- Scroll animations (Intersection Observer) ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.animate, .animate-scale').forEach(el => observer.observe(el));
+
+
+    // --- Animated stat counters ---
+    const statEls = [...document.querySelectorAll('.stat-value[data-target]')];
+    let countersRun = false;
+
+    const statObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !countersRun) {
+        countersRun = true;
+        statEls.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const suffix = el.dataset.suffix || '';
+          const dur    = 1200;
+          const start  = performance.now();
+          function tick(now) {
+            const p = Math.min((now - start) / dur, 1);
+            const v = Math.round(p < 0.5 ? 2*p*p * target : (1 - Math.pow(-2*p+2,2)/2) * target);
+            el.textContent = v + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        });
+      }
+    }, { threshold: 0.5 });
+
+    if (statEls.length) statObserver.observe(document.querySelector('.stats-bar'));
+
+
+    // --- FAQ accordion ---
+    document.querySelectorAll('.faq-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq-trigger').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.style.maxHeight = null;
+        });
+        // Open clicked (unless it was already open)
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          const body = btn.nextElementSibling;
+          body.style.maxHeight = body.scrollHeight + 'px';
+        }
+      });
+    });
+
+
+    // --- Mailing list form (Formspree AJAX) ---
+    const mailForm = document.getElementById('mailForm');
+    if (mailForm) {
+      mailForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const btn = mailForm.querySelector('button');
+        btn.textContent = 'Saving...';
+        btn.disabled = true;
+        try {
+          const res = await fetch(mailForm.action, {
+            method: 'POST', body: new FormData(mailForm),
+            headers: { 'Accept': 'application/json' }
+          });
+          btn.textContent = res.ok ? '✓ You\'re on the list!' : 'Try again';
+          if (res.ok) mailForm.querySelector('input').value = '';
+        } catch {
+          btn.textContent = 'Try again';
+        }
+        btn.disabled = false;
+      });
+    }
+
+  })();
+  </script>
+
+</body>
+</html>
