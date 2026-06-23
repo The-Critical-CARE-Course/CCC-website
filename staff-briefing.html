@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Internal briefing for new ICU staff.">
+  <title>New ICU Staff Briefing — The Critical CARE Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ===== Password gate ===== */
+    #gateOverlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--navy, #0a2540);
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .gate-box {
+      background: #fff; border-radius: 14px; padding: 40px 32px;
+      max-width: 380px; width: 100%; text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .gate-box h1 { font-size: 20px; margin-bottom: 8px; color: var(--navy, #0a2540); }
+    .gate-box p { font-size: 14px; color: var(--mid-gray, #667); margin-bottom: 20px; }
+    .gate-box input[type="password"] {
+      width: 100%; padding: 12px 14px; font-size: 15px;
+      border: 1px solid #d0d5dd; border-radius: 8px; margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+    .gate-box button {
+      width: 100%; padding: 12px 14px; font-size: 15px; font-weight: 600;
+      border: none; border-radius: 8px; cursor: pointer;
+      background: var(--blue, #1d4ed8); color: #fff;
+    }
+    .gate-box button:hover { opacity: 0.9; }
+    .gate-error { color: #dc2626; font-size: 13px; margin-top: 10px; display: none; }
+    #siteContent { display: none; }
+
+    /* ===== Briefing content helpers ===== */
+    .briefing-warning {
+      border: 1px solid #fecaca; background: #fef2f2; color: #991b1b;
+      border-radius: 10px; padding: 16px 20px; font-weight: 600;
+      font-size: 14px; text-align: center; margin: 24px 0 32px;
+    }
+    .checklist-step {
+      background: var(--off-white, #f7f8fa); border-radius: 12px;
+      padding: 20px 22px; margin-bottom: 14px; border-left: 4px solid var(--blue, #1d4ed8);
+    }
+    .checklist-step h3 { font-size: 16px; margin-bottom: 6px; color: var(--navy, #0a2540); }
+    .checklist-step p { font-size: 14px; line-height: 1.6; margin: 0; }
+    .briefing-table {
+      width: 100%; border-collapse: collapse; margin: 16px 0 8px; font-size: 14px;
+    }
+    .briefing-table th, .briefing-table td {
+      text-align: left; padding: 10px 14px; border-bottom: 1px solid #e5e7eb;
+    }
+    .briefing-table th { background: var(--off-white, #f7f8fa); }
+    .contact-card {
+      background: var(--off-white, #f7f8fa); border-radius: 10px;
+      padding: 16px 20px; margin-bottom: 12px;
+    }
+    .contact-card strong { display: block; color: var(--navy, #0a2540); margin-bottom: 2px; }
+  </style>
+</head>
+<body>
+
+  <!-- ========== PASSWORD GATE ========== -->
+  <div id="gateOverlay">
+    <div class="gate-box">
+      <h1>Staff Briefing — Restricted</h1>
+      <p>This page is for ICU team members only. Enter the password to continue.</p>
+      <input type="password" id="gatePassword" placeholder="Password" autocomplete="off">
+      <button id="gateSubmit">Unlock</button>
+      <div class="gate-error" id="gateError">Incorrect password — please try again.</div>
+    </div>
+  </div>
+
+  <div id="siteContent">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="images/Logo.png" alt="The Critical CARE Course" style="height:44px; width:auto; flex-shrink:0;">
+          <div class="nav-logo-text">
+            <div class="brand">The Critical <span style="color:var(--red)">CARE</span> Course</div>
+            <div class="sub"><span style="color:var(--red)">C</span>ore <span style="color:var(--red)">A</span>ssessment <span style="color:var(--red)">R</span>evision &amp; <span style="color:var(--red)">E</span>ducation</div>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">The Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener" class="nav-cta">Book a Place</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE HERO ========== -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>New ICU Staff Briefing</span>
+      </div>
+      <h1>Briefing for New ICU Staff</h1>
+      <p>Internal guidance — please read carefully and act promptly.</p>
+    </div>
+  </header>
+
+  <!-- ========== INTRO ========== -->
+  <section style="padding-top:48px;">
+    <div class="container" style="max-width:760px;">
+      <p style="font-size:16px; line-height:1.7; color:var(--body-text);">
+        Welcome — we're delighted you'll be joining us in the ICU. As part of your introduction to critical care, you'll attend
+        <strong>The Critical CARE Course</strong> — an excellent two-day programme that will set you up well for your placement.
+        Please read this document carefully and act on it promptly, as places are limited and some steps take time to arrange.
+      </p>
+
+      <div class="briefing-warning">
+        Please complete all five steps below as soon as possible. We cannot guarantee a place on the course or shift cover if this is left too late.
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACTION CHECKLIST ========== -->
+  <section style="padding-top:0;">
+    <div class="container" style="max-width:760px;">
+      <h2 class="section-title" style="margin-bottom:20px;">Your Action Checklist</h2>
+
+      <div class="checklist-step">
+        <h3>1. Apply for Study Leave</h3>
+        <p>If you have study leave allowance, apply for this in the usual way as soon as possible. No ICU signatures are needed before submitting — simply note on the form that attendance is <em>with permission from Prof Hulme to attend the Critical CARE Course at the start of your placement</em>.</p>
+      </div>
+
+      <div class="checklist-step">
+        <h3>2. Notify the ICU roster team</h3>
+        <p>Email the rostering team so your shift can be confirmed as covered before you book your place: <a href="mailto:swb-tr.SWBH-GM-anaes-rota@nhs.net">swb-tr.SWBH-GM-anaes-rota@nhs.net</a></p>
+      </div>
+
+      <div class="checklist-step">
+        <h3>3. Book your place on the course</h3>
+        <p>Once your shift is confirmed, visit the course website and secure your place. Pay upfront — you will be reimbursed through study leave funding: <a href="https://thecriticalcarecourse.com" target="_blank" rel="noopener">thecriticalcarecourse.com</a>. If you do not have access to a study leave budget, please get in touch with Prof Hulme before you book your place.</p>
+      </div>
+
+      <div class="checklist-step">
+        <h3>4. Complete your pre-course reading — Day 1 of the course</h3>
+        <p>Work through the course manual before the face-to-face teaching day. The SWB education team considers this preparation day to be Day 1 of the course. It is expected to be completed during Self Development Time or in your own time.</p>
+      </div>
+
+      <div class="checklist-step">
+        <h3>5. Submit your claim for reimbursement — after attending the course</h3>
+        <p>Once you have attended the course, submit the relevant claim for the course fee in the usual way to recover it via your study leave funding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT THE COURSE ========== -->
+  <section>
+    <div class="container" style="max-width:760px;">
+      <h2 class="section-title" style="margin-bottom:14px;">About the Course</h2>
+      <p style="font-size:15px; line-height:1.7; color:var(--body-text);">
+        The Critical CARE Course runs over two days: Day 1 is self-directed preparation using the course manual
+        (considered by the SWB education team as the first day of the course), followed by a face-to-face teaching day.
+        The taught day builds directly on the manual, so it is essential you complete the pre-course reading beforehand
+        and arrive with a good grasp of the background material.
+      </p>
+      <p style="font-size:15px; line-height:1.7; color:var(--body-text); margin-top:14px;">
+        Course website: <a href="https://thecriticalcarecourse.com" target="_blank" rel="noopener">https://thecriticalcarecourse.com</a>
+      </p>
+      <p style="font-size:14px; line-height:1.7; color:var(--mid-gray);">
+        Please note: The Critical CARE Course is an external course — SWB simply facilitates places. Booking is handled
+        through the course's own web-based system. Once you have paid, course information is sent to you automatically.
+        If it doesn't arrive, check your junk folder first (NHS email filters are often the culprit). If you still haven't
+        received it, contact the course organisers directly.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== STUDY LEAVE & REIMBURSEMENT ========== -->
+  <section>
+    <div class="container" style="max-width:760px;">
+      <h2 class="section-title" style="margin-bottom:14px;">Study Leave &amp; Reimbursement</h2>
+      <p style="font-size:15px; line-height:1.7; color:var(--body-text);">
+        The course fee is reimbursable through study leave funding via the standard SWB process. You will need to:
+      </p>
+      <ul style="font-size:15px; line-height:1.8; color:var(--body-text); padding-left:20px;">
+        <li>Apply for study leave in the usual way.</li>
+        <li>Book and pay for your place on the course website.</li>
+        <li>Submit a claim for the course fee in the usual way <strong>after attending the course</strong>.</li>
+      </ul>
+      <p style="font-size:15px; line-height:1.7; color:var(--body-text); margin-top:10px;">
+        Six weeks' notice is <strong>not</strong> required for this course — the education team is aware of this. You
+        <strong>do not</strong> need ICU signatures before submitting. Simply note on the form that attendance is
+        <em>with permission from Prof Hulme to attend the Critical CARE Course at the start of your placement</em>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== SHIFT COVER ========== -->
+  <section>
+    <div class="container" style="max-width:760px;">
+      <h2 class="section-title" style="margin-bottom:14px;">Shift Cover</h2>
+      <p style="font-size:15px; line-height:1.7; color:var(--body-text);">
+        SWB expects and supports attendance at the course as far as is reasonably possible. The department will cover
+        several shifts to enable you to attend the face-to-face day, provided your study leave submission has been made
+        in good time:
+      </p>
+      <table class="briefing-table">
+        <thead>
+          <tr><th>When</th><th>Cover</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Night before the course</td><td>Shift will be covered</td></tr>
+          <tr><td>Day of the course (normal working day)</td><td>Shift will be covered</td></tr>
+          <tr><td>Day of the course (long day)</td><td>Attend the unit after the course and complete the remainder of the shift</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:14px; line-height:1.7; color:var(--mid-gray); margin-top:10px;">
+        Please note: if you claim paid study leave and are granted time off (e.g. through shift rearrangement), you
+        <strong>will be expected</strong> to repay the clinical time at a later stage.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== KEY CONTACTS ========== -->
+  <section style="padding-bottom:64px;">
+    <div class="container" style="max-width:760px;">
+      <h2 class="section-title" style="margin-bottom:14px;">Key Contacts</h2>
+
+      <div class="contact-card">
+        <strong>ICU Rostering Team</strong>
+        <a href="mailto:swb-tr.SWBH-GM-anaes-rota@nhs.net">swb-tr.SWBH-GM-anaes-rota@nhs.net</a>
+        <div style="font-size:13px; color:var(--mid-gray); margin-top:2px;">For all shift cover and rota queries</div>
+      </div>
+
+      <div class="contact-card">
+        <strong>Course Website</strong>
+        <a href="https://thecriticalcarecourse.com" target="_blank" rel="noopener">thecriticalcarecourse.com</a>
+        <div style="font-size:13px; color:var(--mid-gray); margin-top:2px;">Book your place and access course materials</div>
+      </div>
+
+      <p style="font-size:12px; color:var(--mid-gray); margin-top:24px; text-align:center;">
+        Core Assessment Revision &amp; Education — this document is issued by the SWB Postgraduate Clinical Tutors.
+        The Critical CARE Course is an independent external course; SWB facilitates places only.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">The Critical CARE Course</div>
+          <p>Fundamentals of critical care medicine through multidisciplinary team small-group facilitated learning, taught by experienced clinicians.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About the Course</a></li>
+            <li><a href="foreword.html">Course Foreword</a></li>
+            <li><a href="team.html">The Team</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="about.html#manual">Course Manual</a></li>
+            <li><a href="https://sympozium.co.uk/ep-home/the-critical-care-course" target="_blank" rel="noopener">Book a Place</a></li>
+            <li><a href="about.html#terms">Payment Terms</a></li>
+            <li><a href="https://twitter.com/critcarecourse" target="_blank" rel="noopener">@critcarecourse</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Critical CARE Course. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="https://twitter.com/critcarecourse" target="_blank" rel="noopener" class="social-link" aria-label="Twitter / X">&#120143;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div><!-- /#siteContent -->
+
+  <script>
+    // Mobile nav
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => links.classList.toggle('open'));
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+    }
+
+    // ===== Password gate =====
+    // NOTE: this is a client-side check only, suitable for keeping casual visitors
+    // out of an unlinked page — it does not encrypt or hide this file's source.
+    (function () {
+      const PASSWORD = 'swbicuccc';
+      const overlay  = document.getElementById('gateOverlay');
+      const content  = document.getElementById('siteContent');
+      const input    = document.getElementById('gatePassword');
+      const button   = document.getElementById('gateSubmit');
+      const errorMsg = document.getElementById('gateError');
+
+      function unlock() {
+        overlay.style.display = 'none';
+        content.style.display = 'block';
+        sessionStorage.setItem('ccc_staff_briefing_unlocked', 'true');
+      }
+
+      if (sessionStorage.getItem('ccc_staff_briefing_unlocked') === 'true') {
+        unlock();
+      }
+
+      function tryPassword() {
+        if (input.value === PASSWORD) {
+          unlock();
+        } else {
+          errorMsg.style.display = 'block';
+          input.value = '';
+          input.focus();
+        }
+      }
+
+      button.addEventListener('click', tryPassword);
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') tryPassword();
+      });
+    })();
+  </script>
+
+</body>
+</html>
