@@ -1437,3 +1437,28 @@ footer h4 {
   .timetable::before { left: 64px; }
   .timetable-row { grid-template-columns: 64px 1fr; }
 }
+
+/* ============================================
+   DELEGATE FEEDBACK
+   ============================================ */
+.feedback-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.feedback-stat {
+  background: linear-gradient(140deg, var(--blue-deep) 0%, var(--blue-dark) 100%);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  border-top: 3px solid var(--red);
+}
+.fs-value { font-size: 32px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; margin-bottom: 8px; }
+.fs-value span { font-size: 16px; font-weight: 600; opacity: 0.7; }
+.fs-label { font-size: 12px; color: rgba(255,255,255,0.72); font-weight: 500; line-height: 1.4; }
+.testimonial-featured { grid-column: 1 / -1; padding: 40px 36px; }
+.testimonial-featured .testimonial-text { font-size: 17px; }
+.feedback-note { font-size: 12px; color: var(--mid-gray); line-height: 1.6; margin-top: 28px; max-width: 760px; }
+@media (max-width: 860px) { .feedback-stats { grid-template-columns: repeat(2, 1fr); } .feedback-stat:last-child { grid-column: 1 / -1; } }
