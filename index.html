@@ -497,58 +497,56 @@
         <div class="feedback-stat"><div class="fs-value">63.1%</div><div class="fs-label">More likely to consider a career in intensive care*</div></div>
       </div>
 
-      <div class="testimonials-grid">
-        <div class="testimonial-card testimonial-featured animate delay-1">
+      <div class="quote-carousel animate delay-2" id="quoteCarousel" role="region" aria-label="Comments from course attendees">
+      <div class="quote-track">
+        <figure class="quote-slide active">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">The course feels like an essential day for anyone remotely considering Intensive Care as a career or for those who are likely to be interacting with Intensivists in their specialty.<br><br>Pitched at a perfect level I felt that I got a comprehensive introduction to key pathophysiological concepts and how this can be applied to patients and real-life scenarios. Being allowed to work through cases with the expert faculty facilitated meaningful thinking time and consideration.<br><br>No question felt like a stupid question with a very welcoming faculty. A fabulous day!</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">Excellent course. I’m pretty confident it would help a lot in my ITU placement. The small group session was very useful. Faculty was very approachable and was happy to answer any questions. Would happily recommend it to other people in my circle about this awesome course.</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">Excellent course - very useful to current post and future practice. All facilitators super supportive, knowledgeable and great teachers. Loved the use of diagrams and case studies - helped to consolidate information. Pre course handbook is very useful. Overall course has been organised very well.</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">Brilliant introductory course for intensive care. Delivered by experts with the focus of good understand of underlying principle, which often lacking in medical education. Well integrated into real life cases and very interactive. Would highly recommend to any clinician working in the hospital.</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">I thought this was a really well run course. I found it helpful that each organ system was stripped back to basics to aid understanding and allow knowledge to be build on a firm foundation. All the speakers were excellent. Sessions were well thought out. I really enjoyed the course and would recommend to anyone starting in intensive care.</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">One of the best courses I’ve been on!</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">Found the whole day incredibly useful especially for nurses! Learnt more today than on the PGCert ACCC! Teachers were amazing!</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">A really brilliant course. Thank you all very much for giving up your time to create and deliver it. It's very much encouraged me to continue pursuing critical care :).</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">Fantastic course! I learnt so much and feel much more prepared for my job on ITU. Thanks so much!</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
-        <div class="testimonial-card animate delay-1">
+        </figure>
+        <figure class="quote-slide">
           <div class="quote-mark">"</div>
           <p class="testimonial-text">Really well organised course. Covers everything I could imagine you need to know before starting an ICU post. Engaging, friendly and committed team members.</p>
-          <div class="testimonial-author">Course delegate</div>
-        </div>
+        </figure>
       </div>
+      <div class="quote-controls">
+        <button class="quote-btn" id="quotePrev" aria-label="Previous comment">&#8592;</button>
+        <div class="quote-dots" id="quoteDots"></div>
+        <button class="quote-btn" id="quoteNext" aria-label="Next comment">&#8594;</button>
+      </div>
+      </div>
+
 
       <p class="feedback-note">Scores are based on 234 responses. Three responses with a score of 1 were excluded from the score calculations, as each respondent also said they would recommend the course and felt it was good value for money, indicating the scale was misread. *125 of the 198 delegates who answered this question. Spelling corrected in some comments.</p>
     </div>
@@ -668,6 +666,40 @@
     document.getElementById('carouselNext').addEventListener('click', () => goTo(current + 1));
     timer = setInterval(() => goTo(current + 1), 5000);
 
+
+
+    // --- Feedback quote carousel ---
+    const qc = document.getElementById('quoteCarousel');
+    if (qc) {
+      const qSlides = [...qc.querySelectorAll('.quote-slide')];
+      const qDots = document.getElementById('quoteDots');
+      let qi = 0, qTimer;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      qSlides.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'quote-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Comment ' + (i + 1));
+        d.addEventListener('click', () => qGo(i));
+        qDots.appendChild(d);
+      });
+      function qGo(n) {
+        qSlides[qi].classList.remove('active');
+        qDots.children[qi].classList.remove('active');
+        qi = (n + qSlides.length) % qSlides.length;
+        qSlides[qi].classList.add('active');
+        qDots.children[qi].classList.add('active');
+        qStart();
+      }
+      function qStart() {
+        clearInterval(qTimer);
+        if (!reduce) qTimer = setInterval(() => qGo(qi + 1), 8000);
+      }
+      document.getElementById('quotePrev').addEventListener('click', () => qGo(qi - 1));
+      document.getElementById('quoteNext').addEventListener('click', () => qGo(qi + 1));
+      qc.addEventListener('mouseenter', () => clearInterval(qTimer));
+      qc.addEventListener('mouseleave', qStart);
+      qStart();
+    }
 
     // --- Scroll animations (Intersection Observer) ---
     const observer = new IntersectionObserver((entries) => {
