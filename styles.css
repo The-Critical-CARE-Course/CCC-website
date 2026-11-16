@@ -1290,7 +1290,8 @@ footer h4 {
   aspect-ratio: 16/9;
 }
 
-.video-wrap iframe {
+.video-wrap iframe,
+.video-wrap video {
   position: absolute;
   inset: 0;
   width: 100%;
